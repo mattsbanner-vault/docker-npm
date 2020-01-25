@@ -1,6 +1,6 @@
-# Composer Contained
+# NPM Contained
 
 ## Executing
 ```shell script
-$ docker run --rm -it -v $PWD:/app containphp/npm:latest npm install
+$ docker run --rm -it -v $PWD:/app mattbanner/npm:latest npm install
 ```
