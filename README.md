@@ -11,12 +11,12 @@ There's no need for the `npm` prefix as that's where the container starts.
 ## Executing
 
 ```shell script
-$ docker run --rm -it -v $PWD:/app mattbanner/npm:10.x-latest install
+$ docker run --rm -it -v $PWD:/app -v ~/.npm/:/root/.npm mattbanner/npm:10.x-latest install
 ```
 
 ## Alias It!
 That's a pretty lengthy command to have to type every time you need to update some packages. Therefore I have this aliased to the command `npm` on my machine. I've actually uninstalled NPM locally; yet I can still run `npm install` just like anyone else.
 
 ```
-alias npm='docker run --rm -it -v $PWD:/app mattbanner/npm:10.x-latest'
+alias npm='docker run --rm -it -v $PWD:/app -v ~/.npm/:/root/.npm mattbanner/npm:10.x-latest install'
 ```
