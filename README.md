@@ -18,5 +18,5 @@ $ docker run --rm -it -v $PWD:/app -v ~/.npm/:/root/.npm mattbanner/npm:10.x-lat
 That's a pretty lengthy command to have to type every time you need to update some packages. Therefore I have this aliased to the command `npm` on my machine. I've actually uninstalled NPM locally; yet I can still run `npm install` just like anyone else.
 
 ```
-alias npm='docker run --rm -it -v $PWD:/app -v ~/.npm/:/root/.npm mattbanner/npm:10.x-latest install'
+alias npm='docker run --rm -it -v $PWD:/app -v ~/.npm/:/root/.npm mattbanner/npm:10.x-latest'
 ```
