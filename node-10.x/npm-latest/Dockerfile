@@ -18,12 +18,15 @@ RUN \
     apt-get install -y \
         nodejs && \
     npm i -g npm@$NPM_VERSION && \
+    useradd user && \
     apt-get remove -y software-properties-common curl && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 VOLUME ["/app"]
 WORKDIR /app
+
+USER user
 
 CMD ["-"]
 ENTRYPOINT ["npm", "--ansi"]
